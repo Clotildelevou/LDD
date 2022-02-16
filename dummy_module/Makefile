@@ -1,14 +1,10 @@
-# Au choix :
-# Sources de mon kernel
-
-KDIR := /lib/modules/$(shell uname -r)/build
-# OU headers spécifiques
-
 KDIR := /usr/src/linux-headers-$(shell uname -r)
-
 PWD := $(shell pwd)
+obj-m := dummy.o
 
-obj-m := dumbest.o
-
-clean modules_install modules:
-	make -C $(KDIR) M=$(PWD) $@
+modules:
+	make -C $(KDIR) M=$(PWD) modules
+modules_install:
+	make -C $(KDIR) M=$(PWD) modules_install
+clean:
+	make -C $(KDIR) ML=$(PWD) clean
