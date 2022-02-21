@@ -1,6 +1,6 @@
 KDIR := /usr/src/linux-headers-$(shell uname -r)
 PWD := $(shell pwd)
-obj-m := printk.o
+obj-m := my_printk.o
 
 modules:
 	make -C $(KDIR) M=$(PWD) modules

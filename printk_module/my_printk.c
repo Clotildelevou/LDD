@@ -4,10 +4,9 @@ MODULE_AUTHOR("Clotilde Levesque");
 MODULE_DESCRIPTION("Printk exprotedmodule.");
 MODULE_LICENSE("GPL v2");
 
-int my_printk(int a)
+void foo(int a)
 {
-	printk(KERN_ALERT "%d\n", a);
-	return 0;
+	printk(KERN_INFO "foo: %d\n", a);
 }
 
-EXPORT_SYMBOL(my_printk);
+EXPORT_SYMBOL(foo);
