@@ -1,1 +1,0 @@
-cmd_/home/dril/Documents/LDD/hello_module/Module.symvers := sed 's/\.ko$$/\.o/' /home/dril/Documents/LDD/hello_module/modules.order | scripts/mod/modpost -m -a  -o /home/dril/Documents/LDD/hello_module/Module.symvers -e -i Module.symvers   -T -
